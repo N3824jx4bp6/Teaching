@@ -181,4 +181,5 @@ type 函數會取得項目的資料型態，其語法如下：
     
     gpa = 4.0
     print("Leon's GPA is " + str(gpa)) #Leon's GPA is 4.0
+```
     
