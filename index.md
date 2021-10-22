@@ -1,5 +1,6 @@
 # Python基礎教學(Foundamental Of Python)
 
+_2021/10/26_
 ## Python 語言特色
 * 高階語言：Python 是一種高階程式語言，撰寫程式時不需要考量低階語言等細節，如管理記憶體、位址等等
 * 直譯式語言：Python 語言寫的程式不需要翻譯二進制代碼，且可以直接使用原始碼運行。
@@ -129,7 +130,7 @@ print 函數可以列印出指定項目的內容，是最常見的語法之一�
 ```python       
     print(100)
     print("今晚打老虎")
-    print(Taiwan's country code is 886)
+    print("Taiwan's country code is 886")
 ```
 **參數格式化**
 
@@ -156,28 +157,26 @@ type 函數會取得項目的資料型態，其語法如下：
     print(type(3.14))   #<class'float'>
 ```
 **資料型態的轉換**
-相同的資料才能進行運算，如前面提到，Python具有簡單的資料型態自動轉換功能，例如整數+浮點數，系統會將整束轉為浮點數再運算，其語法如下：
+相同的資料才能進行運算，如前面提到，Python具有簡單的資料型態自動轉換功能，其中包括整數、浮點數、布林函數，例如整數+浮點數，系統會將整束轉為浮點數再運算，其語法如下：
 ```python   
     num = 1 + 1.5 #輸出結果是 2.5 浮點數
+    num = 1 + True #輸出結果是 2 整數
 ```
-
+其中，若有系統無法進行轉換的資料型態，則需以資料型態轉換函數來強制轉換，如：
+整數加上字串會產生錯誤
+```python   
+    num = 10 + "10" #字串不能進行加法運算
     
-You can use the [editor on GitHub](https://github.com/N3824jx4bp6/Teaching/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+    gpa = 4.0
+    print("Leon's GPA is " + gpa) #數值不能自動轉換為字串
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/N3824jx4bp6/Teaching/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+* int()：強制轉換為整數資料型態
+* float()：強制轉換為浮點數資料型態
+* str()：強制轉換為字串資料型態
+```python   
+    num = 10 + int("10") #20
+    
+    gpa = 4.0
+    print("Leon's GPA is " + str(gpa)) #數值不能自動轉換為字串
+```
+    
